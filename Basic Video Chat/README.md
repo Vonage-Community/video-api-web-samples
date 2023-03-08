@@ -6,11 +6,11 @@ subscribe to a stream, and mute audio.
 
 ## Demo
 
-> I guess we could maybe get this to link to StackBlitz or something
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/Vonage/video-api-web-samples/tree/main/Basic%20Video%20Chat)
 
-You can see a demo of this sample running at [opentok.github.io/opentok-web-samples/Basic%20Video%20Chat/](https://opentok.github.io/opentok-web-samples/Basic%20Video%20Chat/)
+Enter your credentials in `config.js` and the application will work.
 
-> **Note** The demo is setup so that a new room is generated based on your public IP address. So will only work if you are connecting from 2 browsers on the same network.
+> Note: There is a devDependency `sirv-cli` in the project that is only necessary to run the demo on StackBlitz.
 
 ## Running the App
 
