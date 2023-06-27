@@ -115,5 +115,5 @@ See the following:
 * [API reference](https://developer.vonage.com/en/video/client-sdks/web) -- Provides details on
   the Vonage Video API
 
-* [Developer guides](https://tokbox.com/developer/guides/) -- Includes conceptual information and
+* [Developer guides](https://developer.vonage.com/en/video/overview/) -- Includes conceptual information and
   code samples for all Vonage Video features
