@@ -1,8 +1,6 @@
 # Vonage Video API Web Samples
 
-> Will need to switch out TokBox documentation links with Vonage ones.
-
-Sample applications for using the [Vonage Video API](https://tokbox.com/developer/sdks/js/) library with vanilla JavaScript.
+Sample applications for using the [Vonage Video API](https://developer.vonage.com/en/video/client-sdks/web) library with vanilla JavaScript.
 
 For framework examples (Angular, React, Vue etc.) please see the [Web Component example applications](https://github.com/opentok/web-components/tree/main/examples).
 For the electron app samples, these have been moved to [Vonage Community](https://github.com/Vonage-Community/sample-video-electron-app)
@@ -43,7 +41,7 @@ See the README file in each of these subdirectories for application-specific not
 > will we have this in the Vonage docs?
 
 Each of these sample applications are described in the [Web tutorials
-section](https://tokbox.com/developer/tutorials/web/) of the Vonage Video developer center.
+section](https://developer.vonage.com/en/tutorials/) of the Vonage Video developer center.
 
 **Not seeing a sample application for what you are trying to do? [File a new issue](https://github.com/Vonage/video-api-web-samples/issues/new?labels=new%20sample%20request) or upvote [an existing one](https://github.com/Vonage/video-api-web-samples/labels/new%20sample%20request).**
 
@@ -55,10 +53,10 @@ section](https://tokbox.com/developer/tutorials/web/) of the Vonage Video develo
 
 > Do we have a way to generate the session Id and token from the Vonage dashboard?
 
-   To do this, log into your [TokBox Account](https://tokbox.com/account), and either create
+   To do this, log into your [Vonage Account](https://dashboard.nexmo.com), and either create
    a new project or use an existing project. Then go to your project page and scroll down to the
    **Project Tools** section. From there, you can generate a session ID and token manually. Use the
-   project’s API key along with the session ID and token you generated.
+   project’s Application ID along with the session ID and token you generated.
 
 **Important notes:**
 
@@ -72,7 +70,7 @@ section](https://tokbox.com/developer/tutorials/web/) of the Vonage Video develo
 
 1. The web app is in the index.html (in each sample directory). Open the index.html in a supported browser.
 
-   For information about which browsers are supported by the Vonage Video library see the [browser support section of the documentation](https://tokbox.com/developer/sdks/js/).
+   For information about which browsers are supported by the Vonage Video library see the [browser support section of the documentation](https://developer.vonage.com/en/video/client-sdks/web).
 
 2. When prompted, grant the page access to your camera and microphone.
 
@@ -107,15 +105,15 @@ setting up a web service.
 
    ***Do not add the trailing slash of the URL.***
 
-The sample will load the Vonage Video session ID, token, and API key from the web service. Also,
+The sample will load the Vonage Video session ID, token, and Application ID from the web service. Also,
 the archiving sample will use the web service to start, stop, and view archives.
 
 ## Other resources
 
 See the following:
 
-* [API reference](https://tokbox.com/developer/sdks/js/reference/) -- Provides details on
-  the OpenTok.js API
+* [API reference](https://developer.vonage.com/en/video/client-sdks/web) -- Provides details on
+  the Vonage Video API
 
 * [Developer guides](https://tokbox.com/developer/guides/) -- Includes conceptual information and
-  code samples for all OpenTok features
+  code samples for all Vonage Video features

@@ -1,4 +1,4 @@
-OpenTok.js Basic Video Zoom
+Vonage Video Basic Video Zoom
 =======================
 
 This sample application shows how to use a basic transformer to zoom the publisher with the Vonage

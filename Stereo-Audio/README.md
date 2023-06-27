@@ -1,4 +1,4 @@
-OpenTok.js Stereo Audio Sample
+Vonage Video Stereo Audio Sample
 =======================
 
 As of v2.13 of opentok.js you can enable stereo for audio streaming from a Publisher. This sample shows how to use this API in combination with the audio bitrate and custom stream APIs to stream stereo music from an audio file.

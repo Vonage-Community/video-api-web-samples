@@ -1,4 +1,4 @@
-OpenTok.js Publish from a Canvas Sample
+Vonage Video Publish from a Canvas Sample
 ===========================
 
 In this sample application we show you how to publish a custom stream from a Canvas tag. This sample creates a simple Publisher and publishes it to a Session. For a more detailed example that uses a Canvas to apply a filter to your Camera have a look at the [Stream-Filter](../Stream-Filter) sample.

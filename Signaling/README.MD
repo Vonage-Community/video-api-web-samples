@@ -1,7 +1,7 @@
-OpenTok.js Signaling Sample
+Vonage Video Signaling Sample
 ===========================
 
-This sample application shows the use the OpenTok signaling API to implement text chat.
+This sample application shows the use the Vonage Video signaling API to implement text chat.
 
 ## Demo
 
@@ -20,14 +20,14 @@ and test the application:
 * [Configuring the application](../README.md#configuring-the-application)
 * [Testing the application](../README.md#testing-the-application)
 
-For this application, once the two clients have connected to the OpenTok session, enter text
+For this application, once the two clients have connected to the Vonage Video session, enter text
 in the text field in the bottom-righthand corner of one of the web client pages and press
 the Enter button. The text message is displayed in the text field righthand side of the
 other client's page.
 
 ## Using the signaling API to implement text chat
 
-Text chat is implemented using the OpenTok signaling API. A signal is sent using the `signal()`
+Text chat is implemented using the Vonage Video signaling API. A signal is sent using the `signal()`
 method of the Session object. To receive a signal a client needs to listen to the `signal` event
 dispatched by the session object.
 
@@ -52,7 +52,7 @@ form.addEventListener('submit', (event) => {
 ```
 
 This calls the `signal()` method of the Session object, which sends a signal to all clients
-connected to the OpenTok session. Each signal is defined by a `type` property identifying the type
+connected to the Vonage Video session. Each signal is defined by a `type` property identifying the type
 of message (in this case `"msg"`) and a `data` property containing the message. The text entered is
 sent in the data property of the signal method.
 
@@ -76,7 +76,7 @@ connected to the session:
 event.from.connectionId === session.connection.connectionId ? 'mine' : 'theirs';
 ```
 
-The Session object represents your OpenTok session. It has a `connection` property, which has a
+The Session object represents your Vonage Video session. It has a `connection` property, which has a
 `connectionId` property. The event object represents the event associated with this signal. It has
 a `from` property (which is a Connection object) with a `connectionId` property. This represents
 the connection ID of the client sending the signal. If these match, the signal was sent by the
@@ -84,8 +84,8 @@ local web client.
 
 The data associated with the event is then appended as a child of the `history` DOM element.
 
-This app uses the OpenTok signaling API to implement text chat. However, you can use the signaling
+This app uses the Vonage Video signaling API to implement text chat. However, you can use the signaling
 API to send messages to other clients (individually or collectively) connected to the session.
 
-For more information, see the [OpenTok signaling developer
-guide](https://tokbox.com/developer/guides/signaling/js/).
+For more information, see the [Vonage Video signaling developer
+guide](https://developer.vonage.com/en/video/guides/signaling).

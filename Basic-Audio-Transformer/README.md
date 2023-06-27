@@ -1,4 +1,4 @@
-OpenTok.js Basic Audio Transformer
+Vonage Video Basic Audio Transformer
 =======================
 
 This sample application shows how to use a basic transformer with the Vonage

@@ -1,7 +1,7 @@
-OpenTok.js Archiving Sample
+Vonage Video Archiving Sample
 ===========================
 
-This sample application shows how to record an OpenTok session.
+This sample application shows how to record an Vonage Video session.
 
 ## Demo
 
@@ -23,23 +23,23 @@ and test the application:
 **Important notes:**
 
 * Be sure to [set up the test web service](../README.md#setting-up-the-test-web-service).
-  The API calls to start and stop OpenTok archives take place on the server (not in the
+  The API calls to start and stop Vonage Video archives take place on the server (not in the
   web client).
 
-* This application uses archives that are stored in the OpenTok cloud. In your
-  [OpenTok Account page](https://tokbox.com/account/), ensure that OpenTok project you use
+* This application uses archives that are stored in the Vonage Video cloud. In your
+  [Vonage Customer Dashboard](https://dashboard.nexmo.com), ensure that Video application you use
   is *not* set up to use cloud storage on Microsoft Azure or Amazon S3. In a production
   application, you will want to use a project that has archive file cloud storage on Microsoft
-  Azure or Amazon S3 enabled, since archives stored on the OpenTok cloud are only available
+  Azure or Amazon S3 enabled, since archives stored on the Vonage Video cloud are only available
   for 72 hours.
 
 For this application, click the Start Archive button (in the bottom-left hand corner of the page)
-to start recording the OpenTok session. Then click the Stop Archive button to stop recording the
+to start recording the Vonage Video session. Then click the Stop Archive button to stop recording the
 session. Clicking View Archive will open a link in a new Window/Tab to view the archive.
 
 ## Recording the session to an archive
 
-The OpenTok Archiving API lets you record a session's audio-video streams to MP4 files. You use
+The Vonage Video Archiving API lets you record a session's audio-video streams to MP4 files. You use
 server-side code to start and stop archive recordings. In the `config.js` file, you set the
 `SAMPLE_SERVER_BASE_URL` variable to the base URL of the web service the app calls to start archive
 recording, stop recording, and play back the recorded video.
@@ -104,11 +104,11 @@ end-user.
 * You can have automatically archived sessions, which are recorded whenever a client
 starts publishing a stream.
 
-* This sample application uses archives that are stored in the OpenTok cloud. For a production
+* This sample application uses archives that are stored in the Vonage Video cloud. For a production
 application, you will want to set up a project to have archive file cloud storage on Microsoft Azure
-or Amazon S3 enabled, since archives stored on the OpenTok cloud are only available for 72 hours.
+or Amazon S3 enabled, since archives stored on the Vonage Video cloud are only available for 72 hours.
 To set up Microsoft Azure or Amazon S3 storage for a project's archives, go to your
-[OpenTok Account page](https://tokbox.com/account/).
+[Vonage Customer Dashboard](https://dashboard.nexmo.com).
 
-For more information, see the [OpenTok archiving developer
-guide](https://tokbox.com/developer/guides/archiving/).
+For more information, see the [Vonage Video archiving developer
+guide](https://developer.vonage.com/en/video/guides/archiving/overview).

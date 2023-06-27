@@ -41,8 +41,8 @@ connect others in another session (another meeting room).
 **Token** -- The client also needs a token, which grants them access to the session. Each client is
 issued a unique token when they connect to the session. Since the user publishes an audio-video
 stream to the session, the token generated must include the publish role (the default). For more
-information about tokens, see the Vonage Vide [Token creation
-overview](https://tokbox.com/opentok/tutorials/create-token/).
+information about tokens, see the Vonage Video [Token creation
+overview](https://developer.vonage.com/en/video/guides/create-token).
 
 **Application ID** -- The Application ID identifies your Vonage developer account's application.
 

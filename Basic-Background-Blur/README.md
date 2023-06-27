@@ -1,9 +1,9 @@
-OpenTok.js Basic Background Blur
+Vonage Video Basic Background Blur
 =======================
 
 This sample application shows how to add background blur with the Vonage
 Video APIs. It is very similar to the [Basic Video Chat](../Basic%20Video%20Chat/) example, but it adds a background blur to the publisher in browsers that support media processors. 
-See the [OpenTok documentation](https://tokbox.com/developer/sdks/js/reference/OT.html#hasMediaProcessorSupport) and this [blog post](https://developer.vonage.com/en/blog/blurring-for-clarity-avoid-awkward-conversations-about-your-home) for more information.
+See the [Vonage Video documentation](https://tokbox.com/developer/sdks/js/reference/OT.html#hasMediaProcessorSupport) and this [blog post](https://developer.vonage.com/en/blog/blurring-for-clarity-avoid-awkward-conversations-about-your-home) for more information.
 
 ## Demo
 

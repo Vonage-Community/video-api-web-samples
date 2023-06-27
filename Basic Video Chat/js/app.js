@@ -53,17 +53,17 @@ if (APPLICATION_ID && TOKEN && SESSION_ID) {
   token = TOKEN;
   initializeSession();
 } else if (SAMPLE_SERVER_BASE_URL) {
-  // Make a GET request to get the OpenTok API key, session ID, and token from the server
+  // Make a GET request to get the Vonage Video Application ID, session ID, and token from the server
   fetch(SAMPLE_SERVER_BASE_URL + '/session')
   .then((response) => response.json())
   .then((json) => {
     applicationId = json.applicationId;
     sessionId = json.sessionId;
     token = json.token;
-    // Initialize an OpenTok Session object
+    // Initialize an Vonage Video Session object
     initializeSession();
   }).catch((error) => {
     handleError(error);
-    alert('Failed to get opentok sessionId and token. Make sure you have updated the config.js file.');
+    alert('Failed to get Vonage Video sessionId and token. Make sure you have updated the config.js file.');
   });
 }
