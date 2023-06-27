@@ -3,7 +3,7 @@ Vonage Video Publish from a Canvas Sample
 
 In this sample application we show you how to publish a custom stream from a Canvas tag. This sample creates a simple Publisher and publishes it to a Session. For a more detailed example that uses a Canvas to apply a filter to your Camera have a look at the [Stream-Filter](../Stream-Filter) sample.
 
-As of v2.13 of opentok.js you can set a custom audio source and video source for a publisher's stream when you call [`OT.initPublisher()`](https://tokbox.com/developer/sdks/js/reference/OT.html#initPublisher). The custom audio and video source are [`MediaStreamTrack`](https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack) objects. In this sample we obtain a `MediaStreamTrack` from a canvas, using the [`Canvas.captureStream()`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/captureStream) method to get a `MediaStream` object, and then call `getVideoTracks()[0]` on that object to get the video `MediaStreamTrack` object.
+As of v2.13 of opentok.js you can set a custom audio source and video source for a publisher's stream when you call [`OT.initPublisher()`](https://vonage.github.io/conversation-docs/video-js-reference/latest/OT.html#initPublisher). The custom audio and video source are [`MediaStreamTrack`](https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack) objects. In this sample we obtain a `MediaStreamTrack` from a canvas, using the [`Canvas.captureStream()`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/captureStream) method to get a `MediaStream` object, and then call `getVideoTracks()[0]` on that object to get the video `MediaStreamTrack` object.
 
 ## Demo
 
