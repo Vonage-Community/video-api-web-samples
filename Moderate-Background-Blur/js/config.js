@@ -10,6 +10,6 @@ const SAMPLE_SERVER_BASE_URL = 'https://YOUR-SERVER-URL';
 // set these values to Vonage Video Application ID, a valid session ID, and a token for the session.
 // For test purposes, you can obtain these from https://dashboard.nexmo.com.
 
-const APPLICATION_ID = '';
-const SESSION_ID = '';
-const TOKEN = '';
+const APPLICATION_ID = null;
+const SESSION_ID = null;
+const TOKEN = null;
