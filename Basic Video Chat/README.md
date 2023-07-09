@@ -6,7 +6,7 @@ subscribe to a stream, and mute audio.
 
 ## Demo
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/Vonage/video-api-web-samples/tree/main/Basic%20Video%20Chat)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/vonage-community/video-api-web-samples/tree/main/Basic%20Video%20Chat)
 
 Enter your credentials in `config.js` and the application will work.
 

@@ -7,7 +7,7 @@ See the [Vonage Video documentation](https://vonage.github.io/conversation-docs/
 
 ## Demo
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/Vonage/video-api-web-samples/tree/main/Basic-Background-Blur)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/vonage-community/video-api-web-samples/tree/main/Basic-Background-Blur)
 
 Enter your credentials in `config.js` and the application will work.
 

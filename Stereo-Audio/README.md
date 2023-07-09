@@ -7,7 +7,7 @@ You can enable stereo and set the audio bitrate for a publisher's stream when yo
 
 ## Demo
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/Vonage/video-api-web-samples/tree/main/Stereo-Audio)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/vonage-community/video-api-web-samples/tree/main/Stereo-Audio)
 
 Enter your credentials in `config.js` and the application will work.
 

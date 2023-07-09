@@ -5,7 +5,7 @@ This sample application shows the use the Vonage Video signaling API to implemen
 
 ## Demo
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/Vonage/video-api-web-samples/tree/main/Signaling)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/vonage-community/video-api-web-samples/tree/main/Signaling)
 
 Enter your credentials in `config.js` and the application will work.
 

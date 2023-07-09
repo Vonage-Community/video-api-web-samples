@@ -5,7 +5,7 @@ In this sample application we show you how to choose an initial microphone and c
 
 ## Demo
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/Vonage/video-api-web-samples/tree/main/Publish-Devices)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/vonage-community/video-api-web-samples/tree/main/Publish-Devices)
 
 > Note: There is a devDependency `sirv-cli` in the project that is only necessary to run the demo on StackBlitz.
 

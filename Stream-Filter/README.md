@@ -7,7 +7,7 @@ You can set a custom audio source and video source for a publisher's stream when
 
 ## Demo
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/Vonage/video-api-web-samples/tree/main/Stream-Filter)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/vonage-community/video-api-web-samples/tree/main/Stream-Filter)
 
 Enter your credentials in `config.js` and the application will work.
 
