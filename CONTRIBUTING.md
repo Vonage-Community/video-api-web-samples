@@ -16,7 +16,7 @@ When you're ready to start coding, fork this repository to your own GitHub accou
 
 To run the code for an open PR, follow these steps:
 
-1. `git clone https://github.com/vonage/video-api-web-samples.git`
+1. `git clone https://github.com/vonage-community/video-api-web-samples.git`
 1. `cd video-api-web-samples`
 1. `git checkout BRANCH_NAME`
 1. Go into the sample you want to work on
