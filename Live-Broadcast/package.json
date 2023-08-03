@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/vonage-community/video-api-web-samples/issues"
   },
-  "homepage": "https://github.com/vonage-community/video-api-web-samples/Live-Broadcast#readme"
+  "homepage": "https://github.com/vonage-community/video-api-web-samples/Live-Broadcast#readme",
+  "scripts": {
+    "start": "sirv --dev"
+  },
+  "devDependencies": {
+    "sirv-cli": "^2.0.2"
+  }
 }

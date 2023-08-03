@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Live Broadcast Example</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body>
+        <div class="bg-black flex gap-4">
+            <div class="text-white bold p-4 grow">Live Broadcast Demo</div>
+            <div class="text-white bold hover:bg-white hover:text-black p-4">
+                <a href="/host.html">Host View</a>
+            </div>
+            <div class="text-white bold hover:bg-white hover:text-black p-4">
+                <a href="/hls.html">HLS View</a>
+            </div>
+            <div class="text-white bold hover:bg-white hover:text-black p-4">
+                <a href="/view.html">WebRTC View</a>
+            </div>
+        </div>
+
+        <div class="container mx-auto pt-4">
+            <p>This is an interactive demo showing off various Live Broadcasting features of the Vonage Video API.</p>
+
+            <p>Check out the <span class="font-bold">Host View</span> if you want to be the host of a broadcast, and configure wider broadcast settings.</p>
+
+            <p>Check out the <span class="font-bold">WebRTC View</span> if you want to watch a running broadcast and connect using WebRTC.</p>
+
+            <p>Check out the <span class="font-bold">HLS View</span> if you want to watch the broadcast via an HLS Stream.</p>
+
+            <div>
+                <a class="underline text-blue-500" href="/host.html">Host View</a><br />
+                <a class="underline text-blue-500" href="/view.html">View Broadcast via WebRTC</a><br />
+            </div>
+        </div>
+    </body>
+</html>

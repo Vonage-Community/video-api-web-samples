@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Vonage Video - Broadcast Viewer</title>
+        <script src="//unpkg.com/alpinejs" defer></script>
         <script src="https://unpkg.com/@vonage/video-client@latest/dist/js/opentok.js"></script>
         <script src="/js/config.js"></script>
         <script src="/js/utils.js"></script>
@@ -11,13 +12,44 @@
     </head>
 
     <body>
-        <div class="grid grid-cols-3">
-            <div class="h-80 w-80" id="host"></div>
-            <div class="h-80 w-80" id="guest"></div>
+        <div class="bg-black flex gap-4">
+            <div class="text-white bold p-4 grow">Live Broadcast Demo</div>
+            <div class="text-white bold hover:bg-white hover:text-black p-4">
+                <a href="/host.html">Host View</a>
+            </div>
+            <div class="text-white bold hover:bg-white hover:text-black p-4">
+                <a href="/hls.html">HLS View</a>
+            </div>
+            <div class="text-white bold hover:bg-white hover:text-black p-4">
+                <a href="/view.html">WebRTC View</a>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-3 container mx-auto pt-4">
             <div>
-                <button id="btn-start" class="bg-blue-500 bold text-white p-4 rounded">Start Broadcast</button>
-                <button id="btn-end" class="bg-red-500 bold text-white p-4 rounded">Stop Broadcast</button>
-                <button id="btn-view" class="bg-green-500 bold text-white p-4 rounded">View Broadcast</button>
+                <h2 class="font-black text-2xl">Your Camera</h2>
+                <div class="h-80 w-80" id="host"></div>
+            </div>
+
+            <div class="h-80 w-80" id="guest"></div>
+
+            <div x-data="{ broadcastStatus: 'stopped' }">
+                <div class="grid grid-cols-1 gap-4">
+                    <div><h2 class="font-black text-2xl">Broadcast Options</h2></div>
+
+                    <div><h2 class="font-black text-2xl">Broadcast Controls</h2></div>
+
+                    <div>
+                        <button x-show="broadcastStatus == 'stopped'" x-on:click="broadcastStatus = 'started'" id="btn-start" class="bg-blue-500 bold text-white p-4 rounded">Start Broadcast</button>
+                        <button x-show="broadcastStatus == 'started'" x-on:click="broadcastStatus = 'stopped'"  id="btn-end" class="bg-red-500 bold text-white p-4 rounded">Stop Broadcast</button>
+                    </div>
+
+                    <div><h2 class="font-black text-2xl">View Controls</h2></div>
+                    <div class="grid gap-4">
+                        <div><button id="btn-view-webrtc" class="bg-green-500 bold text-white p-4 rounded">View Broadcast via WebRTC</button></div>
+                        <div><button x-show="broadcastStatus == 'started'" id="btn-view-hls" class="bg-green-500 bold text-white p-4 rounded">View Broadcast via HLS</button></div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

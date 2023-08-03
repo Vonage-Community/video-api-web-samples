@@ -66,8 +66,8 @@
                     .catch(error => console.error(error));
             });
 
-            document.getElementById('btn-view').addEventListener('click', (el, event) => {
-                window.open('/view.html?url=' + broadcast.broadcastUrls.hls)
+            document.getElementById('btn-view-webrtc').addEventListener('click', (el, event) => {
+                window.open('/view.html');
             })
         });
     });

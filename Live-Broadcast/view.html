@@ -5,11 +5,27 @@
         <script src="/js/config.js"></script>
         <script src="/js/utils.js"></script>
         <script src="/js/view.js"></script>
+
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
 
     <body>
-        <div class="grid grid-cols-3">
-            <div class="h-80 w-80" id="host"></div>
+        <div class="bg-black flex gap-4">
+            <div class="text-white bold p-4 grow">Live Broadcast Demo</div>
+            <div class="text-white bold hover:bg-white hover:text-black p-4">
+                <a href="/host.html">Host View</a>
+            </div>
+            <div class="text-white bold hover:bg-white hover:text-black p-4">
+                <a href="/hls.html">HLS View</a>
+            </div>
+            <div class="text-white bold hover:bg-white hover:text-black p-4">
+                <a href="/view.html">WebRTC View</a>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 container mx-auto pt-4">
+            <h2 class="font-black text-2xl mx-auto">Host Camera</h2>
+            <div class="h-80 w-80 mx-auto" id="host"></div>
         </div>
     </body>
 </html>
