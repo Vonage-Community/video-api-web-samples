@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vonage Video - Broadcast Viewer</title>
+        <script src="https://unpkg.com/@vonage/video-client@latest/dist/js/opentok.js"></script>
+        <script src="/js/config.js"></script>
+        <script src="/js/utils.js"></script>
+        <script src="/js/host.js"></script>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body>
+        <div class="grid grid-cols-3">
+            <div class="h-80 w-80" id="host"></div>
+            <div class="h-80 w-80" id="guest"></div>
+            <div>
+                <button id="btn-start" class="bg-blue-500 bold text-white p-4 rounded">Start Broadcast</button>
+                <button id="btn-end" class="bg-red-500 bold text-white p-4 rounded">Stop Broadcast</button>
+                <button id="btn-view" class="bg-green-500 bold text-white p-4 rounded">View Broadcast</button>
+            </div>
+        </div>
+    </body>
+</html>
