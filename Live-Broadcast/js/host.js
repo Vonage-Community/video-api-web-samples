@@ -39,8 +39,8 @@
                     method: "POST",
                     body: JSON.stringify({
                         rtmp: [],
-                        lowLatency: false,
-                        dvr: false,
+                        lowLatency: document.getElementById('lowLatency').checked,
+                        dvr: document.getElementById('dvr').checked,
                         sessionId: session.id,
                         streamMode: "auto"
                     }),

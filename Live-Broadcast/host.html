@@ -36,6 +36,17 @@
             <div x-data="{ broadcastStatus: 'stopped' }">
                 <div class="grid grid-cols-1 gap-4">
                     <div><h2 class="font-black text-2xl">Broadcast Options</h2></div>
+                    <div x-data="{lowLatency: false, dvr: false}">
+                        <div>
+                            <input type="checkbox" id="lowLatency" name="lowLatency" x-bind:disabled="dvr" x-on:click="lowLatency = !lowLatency"> 
+                            <label>Enable Low Latency</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="dvr" name="dvr" x-bind:disabled="lowLatency" x-on:click="dvr = !dvr">
+                            <label>Enable DVR</label>
+                        </div>
+                        
+                    </div>
 
                     <div><h2 class="font-black text-2xl">Broadcast Controls</h2></div>
 
