@@ -1,10 +1,9 @@
 <html>
     <head>
-        <title>Broadcast Viewer</title>
+        <title>HLS Viewer</title>
+        <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
         <script src="https://unpkg.com/@vonage/video-client@latest/dist/js/opentok.js"></script>
-        <script src="/js/config.js"></script>
-        <script src="/js/utils.js"></script>
-        <script src="/js/view.js"></script>
+        <script src="/js/hls.js"></script>
 
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
@@ -24,8 +23,10 @@
         </div>
 
         <div class="grid grid-cols-1 container mx-auto pt-4">
-            <h2 class="font-black text-2xl mx-auto">Host Camera</h2>
-            <div class="w-1/2 h-96 mx-auto" id="host"></div>
+            <h2 class="font-black text-2xl mx-auto">HLS Stream</h2>
+            <div id="host">
+                <video class="w-1/2 mx-auto" id="video" autoplay controls></video>
+            </div>
         </div>
     </body>
 </html>

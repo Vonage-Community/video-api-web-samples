@@ -69,6 +69,10 @@
             document.getElementById('btn-view-webrtc').addEventListener('click', (el, event) => {
                 window.open('/view.html');
             })
+
+            document.getElementById('btn-view-hls').addEventListener('click', (el, event) => {
+                window.open('/hls.html?url=' + broadcast.broadcastUrls.hls);
+            })
         });
     });
 })();
