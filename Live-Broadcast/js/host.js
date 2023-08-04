@@ -1,5 +1,36 @@
 (async () => {
     let broadcast;
+    let shouldCheckBroadcast = false;
+
+    function initPublisher() {
+        return OT.initPublisher('host', {
+            insertMode: 'append',
+            width: '100%',
+            height: '100%',
+        }, (error) => {
+            if (error) { console.log(error); }
+        });
+    }
+
+    async function checkBroadcast() {
+        if (shouldCheckBroadcast) {
+            await fetch(`${SAMPLE_SERVER_BASE_URL}/broadcast/session/status`, {
+                method: "POST",
+                body: JSON.stringify({
+                    sessionId: broadcast.sessionId
+                }),
+                headers: {
+                    "Content-type": "application/json"
+                }
+            })
+                .then(res => {
+                    const data = res.json()
+                    console.log(data);
+                })
+                .catch(error => console.error(error));
+            setTimeout(checkBroadcast, 5000);
+        }
+    }
 
     document.addEventListener('DOMContentLoaded', async () => {
         const credentials = await getCredentials('host');
@@ -16,15 +47,8 @@
                 console.error(error);
                 return;
             }
-            const publisher = OT.initPublisher('host', {
-                insertMode: 'append',
-                width: '100%',
-                height: '100%',
-            }, (error) => {
-                if (error) { console.log(error); }
-            });
 
-            session.publish(publisher);
+            let publisher = initPublisher();
 
             session.on('streamCreated', (event) => {
                 session.subscribe(event.stream, 'guest', {
@@ -35,10 +59,17 @@
             });
 
             document.getElementById('btn-start').addEventListener('click', async (el, event) => {
+                const rtmp = [];
+                if (document.getElementById('rtmpAddress').value) {
+                    rtmp.push({
+                        serverUrl: document.getElementById('rtmpAddress').value,
+                        streamName: document.getElementById('rtmpKey').value,
+                    });
+                }
                 broadcast = await fetch(`${SAMPLE_SERVER_BASE_URL}/broadcast/session/start`, {
                     method: "POST",
                     body: JSON.stringify({
-                        rtmp: [],
+                        rtmp,
                         lowLatency: document.getElementById('lowLatency').checked,
                         dvr: document.getElementById('dvr').checked,
                         sessionId: session.id,
@@ -48,7 +79,12 @@
                         "Content-type": "application/json"
                     }
                 })
-                    .then(res => res.json())
+                    .then(res => {
+                        session.publish(publisher);
+                        shouldCheckBroadcast = true;
+                        setTimeout(checkBroadcast, 5000);
+                        return res.json()
+                    })
                     .catch(error => console.error(error));
             });
 
@@ -62,7 +98,12 @@
                         "Content-type": "application/json"
                     }
                 })
-                    .then(res => res.json())
+                    .then(res => {
+                        session.unpublish(publisher);
+                        shouldCheckBroadcast = false;
+                        publisher = initPublisher();
+                        return res.json()
+                    })
                     .catch(error => console.error(error));
             });
 

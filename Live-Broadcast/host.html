@@ -36,7 +36,7 @@
             <div x-data="{ broadcastStatus: 'stopped' }">
                 <div class="grid grid-cols-1 gap-4">
                     <div><h2 class="font-black text-2xl">Broadcast Options</h2></div>
-                    <div x-data="{lowLatency: false, dvr: false}">
+                    <div x-data="{lowLatency: false, dvr: false, rtmp: false}">
                         <div>
                             <input type="checkbox" id="lowLatency" name="lowLatency" x-bind:disabled="dvr" x-on:click="lowLatency = !lowLatency"> 
                             <label>Enable Low Latency</label>
@@ -45,7 +45,17 @@
                             <input type="checkbox" id="dvr" name="dvr" x-bind:disabled="lowLatency" x-on:click="dvr = !dvr">
                             <label>Enable DVR</label>
                         </div>
-                        
+                        <div>
+                            <input type="checkbox" id="rtmp" name="rtmp"  x-on:click="rtmp = !rtmp">
+                            <label>Enable RTMP</label>
+                        </div>
+                        <div x-show="rtmp" class="pl-4">
+                            <label for="rtmpAddress">RTMP Address:</label>
+                            <input class="border border-black w-full" type="text" name="rtmpAddress" id="rtmpAddress" />
+
+                            <label for="rtmpAddress">RTMP Key:</label>
+                            <input class="border border-black w-full" type="text" name="rtmpKey" id="rtmpKey" />
+                        </div>
                     </div>
 
                     <div><h2 class="font-black text-2xl">Broadcast Controls</h2></div>
@@ -57,7 +67,7 @@
 
                     <div><h2 class="font-black text-2xl">View Controls</h2></div>
                     <div class="grid gap-4">
-                        <div><button id="btn-view-webrtc" class="bg-green-500 bold text-white p-4 rounded">View Broadcast via WebRTC</button></div>
+                        <div><button x-show="broadcastStatus == 'started'" id="btn-view-webrtc" class="bg-green-500 bold text-white p-4 rounded">View Broadcast via WebRTC</button></div>
                         <div><button x-show="broadcastStatus == 'started'" id="btn-view-hls" class="bg-green-500 bold text-white p-4 rounded">View Broadcast via HLS</button></div>
                     </div>
                 </div>

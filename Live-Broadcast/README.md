@@ -162,7 +162,10 @@ document.getElementById('btn-start').addEventListener('click', async (el, event)
             "Content-type": "application/json"
         }
     })
-        .then(res => res.json())
+        .then(res => {
+            session.publish(publisher);
+            return res.json()
+        })
         .catch(error => console.error(error));
 });
 ```
@@ -174,17 +177,21 @@ is that broadcasts remain active until a 120-minute timeout period has completed
 
 ```javascript
 document.getElementById('btn-end').addEventListener('click', async (el, event) => {
-  broadcast = await fetch(`${SAMPLE_SERVER_BASE_URL}/broadcast/session/stop`, {
-      method: "POST",
-      body: JSON.stringify({
-          sessionId: session.id
-      }),
-      headers: {
-          "Content-type": "application/json"
-      }
-  })
-      .then(res => res.json())
-      .catch(error => console.error(error));
+    broadcast = await fetch(`${SAMPLE_SERVER_BASE_URL}/broadcast/session/stop`, {
+        method: "POST",
+        body: JSON.stringify({
+            sessionId: session.id
+        }),
+        headers: {
+            "Content-type": "application/json"
+        }
+    })
+        .then(res => {
+            session.unpublish(publisher);
+            publisher = initPublisher();
+            return res.json()
+        })
+        .catch(error => console.error(error));
 });
 ```
 
