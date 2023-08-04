@@ -1,9 +1,9 @@
 # Vonage Video API Broadcast Sample App for JavaScript
 
-<img src="https://assets.tokbox.com/img/vonage/Vonage_VideoAPI_black.svg" height="48px" alt="Tokbox is now known as Vonage" />
+<img src="https://assets.tokbox.com/img/vonage/Vonage_VideoAPI_black.svg" height="48px" alt="Vonage Video API" />
 
 This document describes how to use the Video API Broadcast Sample App for JavaScript. This
-demo will show you a basic 1:many broadcast application using both WebRTC and HLS. 
+demo will show you a basic 1:many broadcast application using WebRTC, HLS, and RTMP. 
 
 In the Video API Broadcast Sample App, the host is the individual who controls and publishes
 the broadcast.
@@ -23,6 +23,10 @@ to a single HLS stream that can be accessed from an HLS player. The expected lat
 is 10-15 seconds and for low latency HLS is shorter. The host can select different options to start the broadcast (Low latency and DVR).
 The viewers can move back and forth from the HLS viewer view to the WebRTC view.
 
+Third-party RTMP streaming is also supported. You can stream directly from Vonage Video to platforms
+like Twitch or YouTube Live by connecting directly to their RTMP servers. You can then view your
+stream on those third party platforms.
+
 You can configure and run this sample app within just a few minutes!
 
 This guide has the following sections:
@@ -37,7 +41,8 @@ This guide has the following sections:
 To be prepared to develop your Video API Broadcast app:
 
 1. Review the [Vonage Video Video Client SDK](https://developer.vonage.com/en/video/client-sdks/web) requirements.
-2. This application requires a Sample Server with broadcast capabilities. We suggest our [Sample Video Node Learning Server](https://github.com/Vonage-Community/sample-video-node-learning_server/).
+1. If you are testing RTMP, make sure you have an existing account on an RTMP platform.
+1. This application requires a Sample Server with broadcast capabilities. We suggest our [Sample Video Node Learning Server](https://github.com/Vonage-Community/sample-video-node-learning_server/).
 
 ```bash
 npm i
@@ -73,7 +78,7 @@ out the [sample server's README](https://github.com/Vonage-Community/sample-vide
 
 ### Starting a broadcast
 
-From the host view, press the `Start Broadcast` button. You can configure different parametes for the broadcast (HLS Low Latency, DVR )
+From the host view, press the `Start Broadcast` button. You can configure different parametes for the broadcast (HLS Low Latency, DVR, and RTMP Settings)
 
 - Note: DVR functionality and Low Latency are incompatible
 
@@ -90,7 +95,6 @@ the [Vonage Video Client SDK Reference](https://developer.vonage.com/en/video/cl
 - [Viewer](#viewer)
 - [Host](#host)
 - [HLS Viewer](#hls-viewer)
-- [Experience Composer](#experience-composer)
 
 ### Web page design
 
@@ -120,6 +124,7 @@ If you are interested, the following routes will be used from the `[routes/index
 * `/broadcast/:name/viewer` - This route generates credentials for anyone viewing the broadcast via WebRTC
 * `/broadcast/:name/start` - Starts a live broadcast via HLS (Note: Starting a broadcast will end any existing and running broadcasts)
 * `/broadcast/:name/stop` - Stops a live broadcast
+* `/broadcast/:name/status` - Gets the current status of a broadcast
 
 When the web page is loaded, those credentials are retrieved from the configured server and used to authenticate the Client SDK to the Vonage Video platform.
 
@@ -149,10 +154,17 @@ includes the broadcast URL in its JSON-encoded HTTP response:
 
 ```javascript
 document.getElementById('btn-start').addEventListener('click', async (el, event) => {
+    const rtmp = [];
+    if (document.getElementById('rtmpAddress').value) {
+        rtmp.push({
+            serverUrl: document.getElementById('rtmpAddress').value,
+            streamName: document.getElementById('rtmpKey').value,
+        });
+    }
     broadcast = await fetch(`${SAMPLE_SERVER_BASE_URL}/broadcast/session/start`, {
         method: "POST",
         body: JSON.stringify({
-            rtmp: [],
+            rtmp,
             lowLatency: document.getElementById('lowLatency').checked,
             dvr: document.getElementById('dvr').checked,
             sessionId: session.id,
@@ -164,6 +176,8 @@ document.getElementById('btn-start').addEventListener('click', async (el, event)
     })
         .then(res => {
             session.publish(publisher);
+            shouldCheckBroadcast = true;
+            setTimeout(checkBroadcast, 5000);
             return res.json()
         })
         .catch(error => console.error(error));
@@ -188,6 +202,7 @@ document.getElementById('btn-end').addEventListener('click', async (el, event) =
     })
         .then(res => {
             session.unpublish(publisher);
+            shouldCheckBroadcast = false;
             publisher = initPublisher();
             return res.json()
         })
