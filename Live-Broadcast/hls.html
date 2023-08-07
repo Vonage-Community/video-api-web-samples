@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>HLS Viewer</title>
+        <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+        <script src="https://unpkg.com/@vonage/video-client@latest/dist/js/opentok.js"></script>
+        <script src="/js/hls.js"></script>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body>
+        <div class="bg-black flex gap-4">
+            <div class="text-white bold p-4 grow">Live Broadcast Demo</div>
+            <div class="text-white bold hover:bg-white hover:text-black p-4">
+                <a href="/host.html">Host View</a>
+            </div>
+            <div class="text-white bold hover:bg-white hover:text-black p-4">
+                <a href="/hls.html">HLS View</a>
+            </div>
+            <div class="text-white bold hover:bg-white hover:text-black p-4">
+                <a href="/view.html">WebRTC View</a>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 container mx-auto pt-4">
+            <h2 class="font-black text-2xl mx-auto">HLS Stream</h2>
+            <div id="host">
+                <video class="w-1/2 mx-auto" id="video" autoplay controls></video>
+            </div>
+        </div>
+    </body>
+</html>
