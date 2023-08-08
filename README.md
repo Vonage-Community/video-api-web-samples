@@ -20,6 +20,8 @@ The code for this sample is found the following subdirectories:
 
 * Basic-Video-Zoom ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Basic-Video-Zoom)) -- This sample shows you how to use a video transformer to zoom and center a publisher.
 
+* Live-Broadcast ([source](https://github.com/Vonage-Community/video-api-web-samples/tree/main/Live-Broadcast)) -- This sample shows you how to do a live broadcast using WebRTC, HLS, and RTMP.
+
 * Moderate-Background-Blur ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Moderate-Background-Blur)) -- This sample application shows how to add background blur with the Vonage Video APIs and Vonage ML Transformers library.
 
 * Publish-Canvas ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Publish-Canvas)) -- In this sample application we show you how to publish a custom stream from a Canvas tag.
