@@ -40,10 +40,8 @@ The code for this sample is found the following subdirectories:
 
 See the README file in each of these subdirectories for application-specific notes.
 
-> will we have this in the Vonage docs?
-
 Each of these sample applications are described in the [Web tutorials
-section](https://developer.vonage.com/en/tutorials/) of the Vonage Video developer center.
+section](https://developer.vonage.com/en/video/overview) of the Vonage Video developer center.
 
 **Not seeing a sample application for what you are trying to do? [File a new issue](https://github.com/vonage-community/video-api-web-samples/issues/new?labels=new%20sample%20request) or upvote [an existing one](https://github.com/vonage-community/video-api-web-samples/labels/new%20sample%20request).**
 
@@ -51,14 +49,11 @@ section](https://developer.vonage.com/en/tutorials/) of the Vonage Video develop
 
 1. Clone this repository.
 
-2. Edit the config.js file and set the values for `APPLICATION_ID`, `SESSION_ID`, and `TOKEN`:
+2. Edit the config.js file and set the value of `SAMPLE_SERVER_BASE_URL` to the URL of a copy of our [Learninv Video Sample Server](https://github.com/Vonage-Community/sample-video-node-learning_server/). If you do not have a copy of the sample server running, some demos may allows you to set values for `APPLICATION_ID`, `SESSION_ID`, and `TOKEN`:
 
 > Do we have a way to generate the session Id and token from the Vonage dashboard?
 
-   To do this, log into your [Vonage Account](https://dashboard.nexmo.com), and either create
-   a new project or use an existing project. Then go to your project page and scroll down to the
-   **Project Tools** section. From there, you can generate a session ID and token manually. Use the
-   project’s Application ID along with the session ID and token you generated.
+   To do this, log into your [Vonage Account](https://dashboard.nexmo.com), and head to the [Video Playground](https://tools.vonage.com/video/playground/) located under "Developer Tools" > "Video" > "Playground." Here you can configure options for a new video session, and get values for the Application ID, Session ID, and Token.
 
 **Important notes:**
 
