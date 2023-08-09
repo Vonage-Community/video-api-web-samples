@@ -30,6 +30,8 @@ The code for this sample is found the following subdirectories:
 
 * Publish-Devices ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Publish-Devices)) -- In this sample application we show you how to choose different Cameras and Microphones when publishing.
 
+* SIP ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/SIP)) -- In this sample application we show you how to Vonage's Voice API to provide SIP connectivity to video calls.
+
 * Stereo-Audio ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Stereo-Audio)) -- In this sample application we show you how to publish a stereo music file to a Vonage Video session.
 
 > Are still going to do Signaling or switch it out for the Conversation API / Chat?

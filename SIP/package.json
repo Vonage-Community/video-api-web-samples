@@ -1,0 +1,26 @@
+{
+  "name": "sip-calling-demo",
+  "version": "1.0.0",
+  "description": "Vonage Video API SIP Sample Application",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vonage-community/video-api-web-samples.git"
+  },
+  "keywords": [
+    "opentok",
+    "broadcast",
+    "webrtc"
+  ],
+  "author": "Chris Tankersley <chris@ctankersley.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/vonage-community/video-api-web-samples/issues"
+  },
+  "homepage": "https://github.com/vonage-community/video-api-web-samples/Live-Broadcast#readme",
+  "scripts": {
+    "start": "sirv --dev"
+  },
+  "devDependencies": {
+    "sirv-cli": "^2.0.2"
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vonage Video API SIP Demo</title>
+        <script src="https://static.opentok.com/v2/js/opentok.min.js"></script> 
+        <script src="/js/config.js"></script>
+        <script src="/js/index.js"></script>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body>
+        <div class="bg-black flex gap-4">
+            <div class="text-white bold p-4 grow">Vonage Video SIP Integration Demo</div>
+        </div>
+
+        <div class="grid grid-cols-3 container mx-auto pt-4">
+            <div>
+                <h2 class="font-black text-2xl">Your Camera</h2>
+                <div class="h-80 w-80" id="publisher"></div>
+            </div>
+
+            <div>
+                <h2 class="font-black text-2xl">Guests</h2>
+                <div class="h-80 w-80" id="subscribers"></div>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4">
+                <div><h2 class="font-black text-2xl">Dial Options</h2></div>
+                <div>
+                    <h3 class="font-black text-xl">Phone Conference</h3>
+                    <p>You can start a phone conference to let people dial in directly. They can call the following number to join once you have started the conference:</p>
+
+                    <p id="conference-number" class="text-center pb-4"></p>
+                </div>
+                <div>
+                    <button id="btn-dial-conference" class="bg-blue-500 bold text-white p-4 rounded">Create Phone Conference</button>
+                    <button id="btn-disconnect-conference" class="bg-red-500 bold text-white p-4 rounded">Disconnect Phone Conference</button>
+                </div>
+
+                <div>
+                    <h3 class="font-black text-xl">Direct Dial</h3>
+                    <p>Directly dial a phone number and add them to the conference. They will appear as an additional guest and be automatically added to the conference call if you have already started one.</p>
+                </div>
+                <div>
+                    <label for="phone">Number to call:</label>
+                    <input name="phone" id="phone" type="text" placeholder="15554441234" class="border border-black p-4 w-full">
+                    <button id="btn-dial-number" class="bg-blue-500 bold text-white p-4 rounded">Call Number</button>
+                </div>
+            </div>
+    </body>
+</html>
