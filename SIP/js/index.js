@@ -48,7 +48,7 @@
 
         document.getElementById('btn-dial-number').addEventListener('click', async () => {
             const msisdn = document.getElementById('phone').value;
-            const resp = await fetch(`${SAMPLE_SERVER_BASE_URL}sip/session/dial`, {
+            const resp = await fetch(`${SAMPLE_SERVER_BASE_URL}/sip/session/dial`, {
                 method: "POST",
                 body: JSON.stringify({
                     msisdn
