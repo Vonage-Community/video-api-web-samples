@@ -31,7 +31,8 @@ function initializeSession() {
   const publisherOptions = {
     insertMode: 'append',
     width: '100%',
-    height: '100%'
+    height: '100%',
+    resolution: '1280x720'
   };
   const publisher = OT.initPublisher('publisher', publisherOptions, handleError);
 
