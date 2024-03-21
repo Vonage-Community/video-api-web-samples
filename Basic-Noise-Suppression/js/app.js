@@ -10,16 +10,16 @@ let sessionId;
 let token;
 
 const transformStream = async (publisher) => {
-  const mediaProcessor = await createVonageNoiseSuppression();
-  // uncomment if you'd like to see Media Processor events
-  // mediaProcessor.onAny((name, data) => console.log('EVENT', { name, data }));
+  const noiseSuppression = await createVonageNoiseSuppression();
+  // uncomment if you'd like to see Noise Suppression events
+  // noiseSuppression.onAny((name, data) => console.log('EVENT', { name, data }));
 
   // see https://www.npmjs.com/package/@vonage/noise-suppression for options that can be passed into .init()
-  await mediaProcessor.init();
+  await noiseSuppression.init();
 
   // start with noise suppression off
-  mediaProcessor.disable();
-  const mediaProcessorConnector = await mediaProcessor.getConnector();
+  noiseSuppression.disable();
+  const mediaProcessorConnector = await noiseSuppression.getConnector();
 
   if (OT.hasMediaProcessorSupport()) {
     publisher
@@ -29,13 +29,13 @@ const transformStream = async (publisher) => {
       });
 
     enableBtn.addEventListener('click', () => {
-      mediaProcessor.enable();
+      noiseSuppression.enable();
       enableBtn.style.display = 'none';
       disableBtn.style.display = 'block';
     });
 
     disableBtn.addEventListener('click', () => {
-      mediaProcessor.disable();
+      noiseSuppression.disable();
       disableBtn.style.display = 'none';
       enableBtn.style.display = 'block';
     });
