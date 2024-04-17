@@ -34,8 +34,6 @@ The code for this sample is found the following subdirectories:
 
 * Stereo-Audio ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Stereo-Audio)) -- In this sample application we show you how to publish a stereo music file to a Vonage Video session.
 
-> Are still going to do Signaling or switch it out for the Conversation API / Chat?
-
 * Signaling ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Signaling)) -- This sample shows you how to use the Vonage Video Signaling API to implement text chat.
 
 * Stream-Filter ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Stream-Filter)) -- This sample shows you how to apply custom grayscale, sepia and invert filters.
