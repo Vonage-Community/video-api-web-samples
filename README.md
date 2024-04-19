@@ -7,6 +7,8 @@ For the electron app samples, these have been moved to [Vonage Community](https:
 
 The code for this sample is found the following subdirectories:
 
+* Advanced-Noise-Suppression ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Advanced-Noise-Suppression)) -- This sample application shows how to add a background Noise Suppression feature to the Vonage Video APIs. It is very similar to the Basic Video Chat example but it adds a `NoiseSuppressionTransformer` from the `@vonage/noise-suppression` library along with the `MediaProcessor` and `MediaProcessorConnector` from `@vonage/media-processor`. This method allows for additional audio transformers to be applied.
+
 * Archiving ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Archiving)) -- This sample shows you how to record a Vonage Video session.
 
 * Basic-Audio-Transformer ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Basic-Audio-Transformer)) -- This sample application shows how to use a basic audio transformer with the Vonage Video APIs. It is very similar to the Basic Video Chat example but it adds a low-pass filter to the published audio.
@@ -23,6 +25,8 @@ The code for this sample is found the following subdirectories:
 * Live-Broadcast ([source](https://github.com/Vonage-Community/video-api-web-samples/tree/main/Live-Broadcast)) -- This sample shows you how to do a live broadcast using WebRTC, HLS, and RTMP.
 
 * Moderate-Background-Blur ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Moderate-Background-Blur)) -- This sample application shows how to add background blur with the Vonage Video APIs and Vonage ML Transformers library.
+
+* Moderate-Noise-Suppression ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Moderate-Noise-Suppression)) -- This sample application shows how to add a background Noise Suppression feature to the Vonage Video APIs. It is very similar to the Basic Video Chat example but it adds a `createVonageNoiseSuppression` from the `@vonage/noise-suppression` library.
 
 * Publish-Canvas ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Publish-Canvas)) -- In this sample application we show you how to publish a custom stream from a Canvas tag.
 

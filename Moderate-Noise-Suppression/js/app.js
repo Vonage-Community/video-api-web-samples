@@ -1,11 +1,6 @@
-import {
-  MediaProcessor,
-  MediaProcessorConnector,
-} from '../node_modules/@vonage/media-processor/dist/media-processor.es.js';
-
-import { NoiseSuppressionTransformer } from '../node_modules/@vonage/noise-suppression/dist/noise-suppression.es.js';
+import { createVonageNoiseSuppression } from '../node_modules/@vonage/noise-suppression/dist/noise-suppression.es.js';
 /* global OT APPLICATION_ID TOKEN SESSION_ID SAMPLE_SERVER_BASE_URL */
-/* global MediaProcessor MediaProcessorConnector */
+/* global createVonageNoiseSuppression */
 
 const enableBtn = document.querySelector('#enable');
 const disableBtn = document.querySelector('#disable');
@@ -15,18 +10,16 @@ let sessionId;
 let token;
 
 const transformStream = async (publisher) => {
-  const mediaProcessor = new MediaProcessor();
-  const noiseSuppressionTransformer = new NoiseSuppressionTransformer();
-  // uncomment if you'd like to see Media Processor events
-  // mediaProcessor.onAny((name, data) => console.log('EVENT', { name, data }));
+  const noiseSuppression = await createVonageNoiseSuppression();
+  // uncomment if you'd like to see Noise Suppression events
+  // noiseSuppression.onAny((name, data) => console.log('EVENT', { name, data }));
 
   // see https://www.npmjs.com/package/@vonage/noise-suppression for options that can be passed into .init()
-  await noiseSuppressionTransformer.init();
+  await noiseSuppression.init();
 
-  mediaProcessor.setTransformers([noiseSuppressionTransformer]);
-  const mediaProcessorConnector = new MediaProcessorConnector(mediaProcessor);
   // start with noise suppression off
-  noiseSuppressionTransformer.disable();
+  noiseSuppression.disable();
+  const mediaProcessorConnector = await noiseSuppression.getConnector();
 
   if (OT.hasMediaProcessorSupport()) {
     publisher
@@ -36,13 +29,13 @@ const transformStream = async (publisher) => {
       });
 
     enableBtn.addEventListener('click', () => {
-      noiseSuppressionTransformer.enable();
+      noiseSuppression.enable();
       enableBtn.style.display = 'none';
       disableBtn.style.display = 'block';
     });
 
     disableBtn.addEventListener('click', () => {
-      noiseSuppressionTransformer.disable();
+      noiseSuppression.disable();
       disableBtn.style.display = 'none';
       enableBtn.style.display = 'block';
     });
