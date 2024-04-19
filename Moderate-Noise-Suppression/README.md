@@ -1,6 +1,6 @@
 # Vonage Video Moderate Noise Suppression
 
-This sample application shows how to add a background Noise Suppression feature to the Vonage Video APIs. It is very similar to the [Basic Video Chat](../Basic%20Video%20Chat/) example but it adds a `NoiseSuppressionTransformer` from the [@vonage/noise-suppression library](https://www.npmjs.com/package/@vonage/noise-suppression) along with the `MediaProcessor` and `MediaProcessorConnector` from [@vonage/media-processor](https://www.npmjs.com/package/@vonage/media-processor). This method allows for additional audio transformers to be applied.
+This sample application shows how to add a background Noise Suppression feature to the Vonage Video APIs. It is very similar to the [Basic Video Chat](../Basic%20Video%20Chat/) example but it adds a `createVonageNoiseSuppression` from the [@vonage/noise-suppression](https://www.npmjs.com/package/@vonage/noise-suppression) library.
 
 ## Demo
 
