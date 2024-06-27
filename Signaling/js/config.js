@@ -9,7 +9,7 @@ const SAMPLE_SERVER_BASE_URL = 'https://YOUR-SERVER-URL';
 
 // OR, if you have not set up a web server that runs the sample-video-php-learning_server code,
 // set these values to Vonage Video Application ID, a valid session ID, and a token for the session.
-// For test purposes, you can obtain these from https://dashboard.nexmo.com.
+// For test purposes, you can obtain these from https://tools.vonage.com/video/playground.
 
 const APPLICATION_ID = null;
 const SESSION_ID = null;
