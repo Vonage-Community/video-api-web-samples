@@ -1,4 +1,4 @@
-# Vonage Video Moderate Noise Suppression
+# Vonage Video Basic Noise Suppression
 
 This sample application shows how to use the background Noise Suppression feature in the Vonage Video JavaScript Client SDK. It is very similar to the [Basic Video Chat](../Basic%20Video%20Chat/) example but adds the `applyAudioFilter`, `clearAudioFilter`, and `getAudioFilter` methods on the [Publisher Object](https://vonage.github.io/conversation-docs/video-js-reference/latest/Publisher.html).
 
