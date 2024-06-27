@@ -2,7 +2,7 @@
 
 Sample applications for using the [Vonage Video API](https://developer.vonage.com/en/video/client-sdks/web) library with vanilla JavaScript.
 
-For framework examples (Angular, React, Vue etc.) please see the [Web Component example applications](https://github.com/opentok/web-components/tree/main/examples).
+For framework examples (Angular, React, Vue etc.) please see the [Web Component example applications](https://github.com/Vonage-Community/web_components-video_api-javascript/tree/main/examples).
 For the electron app samples, these have been moved to [Vonage Community](https://github.com/Vonage-Community/sample-video-electron-app)
 
 The code for this sample is found the following subdirectories:
