@@ -40,3 +40,7 @@ const subscriber = session.subscribe(
   handleError
 );
 ```
+
+## Credits
+
+Thanks to the [WebRTC team](https://github.com/webrtc) for the [graphing library](https://github.com/webrtc/samples/blob/gh-pages/src/js/third_party/graph.js) used in this application.
