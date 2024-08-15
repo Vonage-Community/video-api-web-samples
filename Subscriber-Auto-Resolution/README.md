@@ -1,8 +1,8 @@
 # Vonage Video Subscriber Auto Resolution Demo
 
-This sample application demonstrates the Subscriber Auto Resolution feature that optimizes video streaming based on the video elements size. This allows developers to design dynamic interfaces for their video applications.
+This sample application demonstrates the Subscriber Auto Resolution feature that optimizes video streaming based on the video element's size. This allows developers to design dynamic interfaces for their video applications.
 
-> Note: The code in this sample application is mostly to showcase the Subscriber Auto Resolution feature. Enabling the capability is one line of code. See below.
+> Note: The code in this sample application is mostly to showcase the Subscriber Auto Resolution feature. Enabling the functionality is one line of code. See below.
 
 ## Demo
 
