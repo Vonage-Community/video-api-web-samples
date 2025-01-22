@@ -11,6 +11,8 @@ The code for this sample is found the following subdirectories:
 
 * Archiving ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Archiving)) -- This sample shows you how to record a Vonage Video session.
 
+* Audio-Input-Device-Changed ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Audio-Input-Device-Changed)) -- This sample application demonstrates the audioInputDeviceChanged event that allows the developer to alert their users whenever their microphone changes.
+
 * Basic-Audio-Transformer ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Basic-Audio-Transformer)) -- This sample application shows how to use a basic audio transformer with the Vonage Video APIs. It is very similar to the Basic Video Chat example but it adds a low-pass filter to the published audio.
 
 * Basic-Background-Blur ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Basic-Background-Blur)) -- This sample application shows how to add background blur with the Vonage Video APIs.
@@ -23,6 +25,8 @@ The code for this sample is found the following subdirectories:
   subscribe to a stream.
 
 * Basic-Video-Zoom ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Basic-Video-Zoom)) -- This sample shows you how to use a video transformer to zoom and center a publisher.
+
+* In-Call-Monitoring ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/In-Call-Monitoring)) -- This sample application demonstrates the qualityScoreChanged (based on the subscriber's audio/video MOS) and cpuPerformanceChanged (real-time indication of device performance related to CPU pressure) events.
 
 * Live-Broadcast ([source](https://github.com/Vonage-Community/video-api-web-samples/tree/main/Live-Broadcast)) -- This sample shows you how to do a live broadcast using WebRTC, HLS, and RTMP.
 
