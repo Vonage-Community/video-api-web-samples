@@ -1,4 +1,4 @@
-Vonage Video Publish Different Devices Sample
+Vonage Video audioInputDeviceChanged event Sample
 ===========================
 
 This sample application demonstrates the [`audioInputDeviceChanged`](https://vonage.github.io/video-docs/video-js-reference/latest/AudioInputDeviceChanged.html) event that allows the developer to alert their users whenever their microphone changes. After selecting your video and audio sources and clicking the Publish button, disconnect your selected audio source and application will switch to an available audio input device.
