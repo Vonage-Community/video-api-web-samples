@@ -4,6 +4,9 @@ let applicationId;
 let sessionId;
 let token;
 
+const publishVideoTrueBtn = document.querySelector('#publish-video-true');
+const publishVideoFalseBtn = document.querySelector('#publish-video-false');
+
 function handleError(error) {
   if (error) {
     console.error(error);
@@ -36,6 +39,11 @@ function initializeSession() {
   };
   const publisher = OT.initPublisher('publisher', publisherOptions, handleError);
 
+  // fires if user revokes permission to camera and/or microphone
+  publisher.on('accessDenied', (event) => {
+    alert(event?.message);
+  });
+  
   // Connect to the session
   session.connect(token, (error) => {
     if (error) {
@@ -45,6 +53,29 @@ function initializeSession() {
       session.publish(publisher, handleError);
     }
   });
+
+  publishVideoTrueBtn.addEventListener('click',() => {
+    publisher.publishVideo(true, (error) => {
+      if (error) {
+        handleError(error);
+      } else {
+        publishVideoTrueBtn.style.display = 'none';
+        publishVideoFalseBtn.style.display = 'block';
+      }
+    });
+  });
+
+  publishVideoFalseBtn.addEventListener('click',() => {
+    publisher.publishVideo(false, (error) => {
+      if (error) {
+          alert('error: ', error);
+      } else {
+        publishVideoFalseBtn.style.display = 'none';
+        publishVideoTrueBtn.style.display = 'block';
+      }
+    });
+  });
+
 }
 
 // See the config.js file.
