@@ -13,6 +13,18 @@ Enter your credentials in `config.js` and the application will work.
 
 > Note: There is a devDependency `sirv-cli` in the project that is only necessary to run the demo on StackBlitz.
 
+## 🌏  Open in other Cloud IDEs
+
+Click any of the buttons below to start a new development environment to demo or contribute to the codebase without having to install anything on your machine:
+
+[![Open in VS Code](https://img.shields.io/badge/Open%20in-VS%20Code-blue?logo=visualstudiocode)](https://vscode.dev/github/vonage-community/video-api-web-samples)
+[![Open in Glitch](https://img.shields.io/badge/Open%20in-Glitch-blue?logo=glitch)](https://glitch.com/edit/#!/import/github/vonage-community/video-api-web-samples)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/vonage-community/video-api-web-samples)
+[![Edit in Codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/vonage-community/video-api-web-samples)
+[![Open in Repl.it](https://replit.com/badge/github/withastro/astro)](https://replit.com/github/vonage-community/video-api-web-samples)
+[![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/vonage-community/video-api-web-samples)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/vonage-community/video-api-web-samples)
+
 ## Running the App
 
 Follow the instructions at [Basic Video Chat](../Basic%20Video%20Chat/)
