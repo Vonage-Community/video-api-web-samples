@@ -1,7 +1,7 @@
 Vonage Video Archiving Sample
 ===========================
 
-This sample application shows how to record an Vonage Video session.
+This sample application shows how to record a Vonage Video session.
 
 ## Demo
 
