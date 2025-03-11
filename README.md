@@ -17,6 +17,8 @@ The code for this sample is found the following subdirectories:
 
 * Basic-Background-Blur ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Basic-Background-Blur)) -- This sample application shows how to add background blur with the Vonage Video APIs.
 
+* Basic-Captions ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Basic-Captions)) -- This sample application shows how to add real-time captions with the Vonage Video APIs.
+
 * Basic-Noise-Suppression ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Basic-Noise-Suppression)) -- This sample application shows how to add a background Noise Suppression feature to the Vonage Video APIs. It is very similar to the Basic Video Chat example but adds the `applyAudioFilter`, `clearAudioFilter`, and `getAudioFilter` methods on the Publisher Object.
 
 * Basic-Video-Transformer ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Basic-Video-Transformer)) -- This sample application shows how to use a basic video transformer with the Vonage Video APIs. It is very similar to the Basic Video Chat example but it adds a threshold processor to the published video.
@@ -33,6 +35,8 @@ The code for this sample is found the following subdirectories:
 * Moderate-Background-Blur ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Moderate-Background-Blur)) -- This sample application shows how to add background blur with the Vonage Video APIs and Vonage ML Transformers library.
 
 * Moderate-Noise-Suppression ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Moderate-Noise-Suppression)) -- This sample application shows how to add a background Noise Suppression feature to the Vonage Video APIs. It is very similar to the Basic Video Chat example but it adds a `createVonageNoiseSuppression` from the `@vonage/noise-suppression` library.
+
+* Post-call Transcription ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Post-Call-Transcription)) -- This sample shows you how to generate a transcription from a Vonage Video session.
 
 * Publish-Canvas ([source](https://github.com/vonage-community/video-api-web-samples/tree/main/Publish-Canvas)) -- In this sample application we show you how to publish a custom stream from a Canvas tag.
 
