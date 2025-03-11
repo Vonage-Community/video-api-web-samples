@@ -3,7 +3,7 @@
     "start": "sirv --dev"
   },
   "dependencies": {
-    "@vonage/noise-suppression": "^1.0.0"
+    "@vonage/noise-suppression": "^1.0.3"
   },
   "devDependencies": {
     "sirv-cli": "^2.0.2"
