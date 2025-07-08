@@ -113,7 +113,7 @@ async function stopCaptions() {
 }
 ```
 
-The `postData` method is by `startCaptions` method to return the `caption` response and is defined as following:
+The `postData` method is used by the `startCaptions` method to return the `caption` response and is defined as following:
 
 ```javascript
 async function postData(url='', data={}) {
