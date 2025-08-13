@@ -5,8 +5,9 @@
   "hostRequirements": {
     "cpus": 2
   },
+  "workspaceFolder": "/workspaces/video-api-web-samples/Bidirectional-Audio-Connector",
   "waitFor": "onCreateCommand",
-  "updateContentCommand": "cd Bidirectional-Audio-Connector && npm install",
+  "updateContentCommand": "npm install",
   "postCreateCommand": "",
   "postAttachCommand": "gh codespace ports visibility 8080:public -c $CODESPACE_NAME && npm start",
   "customizations": {
