@@ -7,6 +7,8 @@ This sample application demonstrates the Bi-directional Audio Connector feature 
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Vonage-Community/video-api-web-samples/tree/DEVX-10081-adds-bi-directional-audio-connector/Bidirectional-Audio-Connector)
 
+> Note: On the "Create a new codespace" screen, under "Dev container configuration" please select "Bidirectional audio connector"
+
 <!-- [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/vonage-community/video-api-web-samples/tree/main/Basic%20Video%20Chat)
 
 Enter your credentials in `config.js` and the application will work.
