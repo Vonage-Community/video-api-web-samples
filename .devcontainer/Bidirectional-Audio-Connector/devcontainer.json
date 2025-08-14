@@ -1,0 +1,34 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
+{
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "hostRequirements": {
+    "cpus": 2
+  },
+  "workspaceFolder": "/workspaces/video-api-web-samples/Bidirectional-Audio-Connector",
+  "waitFor": "onCreateCommand",
+  "updateContentCommand": "npm install",
+  "postCreateCommand": "",
+  "postAttachCommand": "gh codespace ports visibility 8080:public -c $CODESPACE_NAME && npm start",
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "server.js",
+        "index.html",
+        "js/config.js",
+        "js/app.js"
+      ]
+    }
+  },
+  "portsAttributes": {
+    "8080":{
+      "label": "WebSocket Server",
+      "onAutoForward": "openPreview",
+      "protocol": "http"
+    }
+  },
+  "forwardPorts": [8080],
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  }
+}
