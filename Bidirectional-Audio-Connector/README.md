@@ -9,7 +9,7 @@ This sample application demonstrates the Bi-directional Audio Connector feature 
 
 > Note: On the "Create a new codespace" screen, under "Dev container configuration" please select "Bidirectional audio connector"
 
-Enter your credentials in `config.js` and the application will work.
+Enter your server's URL in `config.js` and the application will work.
 
 ## Running the App
 
