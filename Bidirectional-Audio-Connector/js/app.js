@@ -81,15 +81,9 @@ function initializeSession() {
 
 }
 
-async function initializeWebSocketConnection() {
-  // Initialize a WebSocket connection to the server
-  console.log('Initializing WebSocket connection to server');
+async function initializeAudioConnector() {
   try {
-    // Get a JWT for the WebSocket stream
-    const response = await fetch(SAMPLE_SERVER_BASE_URL + '/session');
-    const responseJson = await response.json();
-    webSocketToken = responseJson.token;
-    // Make a POST request to the Audio Connect endpoint
+    // Make a POST request to the Audio Connector endpoint
     const apiResponse = await fetch(`${SAMPLE_SERVER_BASE_URL}/audio-connector/connect`, {
       method: 'POST',
       headers: {
@@ -110,11 +104,11 @@ async function initializeWebSocketConnection() {
 
 audioConnectStartBtn.addEventListener('click',async () => {
   try {
-    await initializeWebSocketConnection();
+    await initializeAudioConnector();
     audioConnectStartBtn.style.display = 'none';
   } catch (error) { 
     handleError(error);
-    alert('Failed to connect to the Audio Connect endpoint.',error);
+    alert('Failed to connect to the Audio Connector endpoint.',error);
   }
 });
 
