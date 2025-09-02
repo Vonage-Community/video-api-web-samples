@@ -4,10 +4,12 @@ let applicationId;
 let sessionId;
 let token;
 let webSocketToken;
+let connectionId;
 
 const publishVideoTrueBtn = document.querySelector('#publish-video-true');
 const publishVideoFalseBtn = document.querySelector('#publish-video-false');
 const audioConnectStartBtn = document.querySelector('#audio-connector-start');
+const audioConnectStopBtn = document.querySelector('#audio-connector-stop');
 
 function handleError(error) {
   if (error) {
@@ -16,7 +18,6 @@ function handleError(error) {
 }
 
 function initializeSession() {
-  console.log('Initializing Vonage Video session with applicationId:', applicationId, 'sessionId:', sessionId, 'token:', token);
   const session = OT.initSession(applicationId, sessionId);
 
   // Subscribe to a newly created stream
@@ -96,7 +97,26 @@ async function initializeAudioConnector() {
       })
     });
     const apiResponseJson = await apiResponse.json();
-    console.log('Response from Audio Connect endpoint:', apiResponseJson);
+    connectionId = apiResponseJson.connectionId;
+  } catch (error) {
+    handleError(error);
+  };
+}
+
+async function stopAudioConnector() {
+  try {
+    // Make a POST request to the Audio Connector endpoint
+    await fetch(`${SAMPLE_SERVER_BASE_URL}/audio-connector/disconnect`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      body: JSON.stringify({
+        sessionId,
+        connectionId
+      })
+    });
   } catch (error) {
     handleError(error);
   };
@@ -104,21 +124,30 @@ async function initializeAudioConnector() {
 
 audioConnectStartBtn.addEventListener('click',async () => {
   try {
-    await initializeAudioConnector();
     audioConnectStartBtn.style.display = 'none';
+    audioConnectStopBtn.style.display = 'inline';
+    await initializeAudioConnector();
   } catch (error) { 
+    audioConnectStopBtn.style.display = 'none';
+    audioConnectStartBtn.style.display = 'inline';
     handleError(error);
     alert('Failed to connect to the Audio Connector endpoint.',error);
   }
 });
 
+audioConnectStopBtn.addEventListener('click',async () => {
+  try {
+    audioConnectStopBtn.style.display = 'none';
+    audioConnectStartBtn.style.display = 'inline';
+    await stopAudioConnector();
+  } catch (error) { 
+    handleError(error);
+    alert('Failed to stop the Audio Connector connection.',error);
+  }
+});
+
 // See the config.js file.
-if (APPLICATION_ID && TOKEN && SESSION_ID) {
-  applicationId = APPLICATION_ID;
-  sessionId = SESSION_ID;
-  token = TOKEN;
-  initializeSession();
-} else if (SAMPLE_SERVER_BASE_URL) {
+if (SAMPLE_SERVER_BASE_URL) {
   // Make a GET request to get the Vonage Video Application ID, session ID, and token from the server
   fetch(SAMPLE_SERVER_BASE_URL + '/session')
   .then((response) => response.json())
