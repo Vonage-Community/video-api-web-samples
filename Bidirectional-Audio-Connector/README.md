@@ -41,7 +41,7 @@ router.post('/audio-connector/connect', async (req, res) => {
         "token": webSocketToken,
         "websocket": {
           "uri": `wss://${webSocketHost}`,
-          "audioRate": 8000,
+          "audioRate": 16000,
           "bidirectional": true
         }
       })
