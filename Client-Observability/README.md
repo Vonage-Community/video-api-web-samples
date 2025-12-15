@@ -1,13 +1,13 @@
 Vonage Client Observability Sample
 =======================
 
-This sample application uses the sender-side statistics to determine the downlink estimation for a sucscriber via:
+This sample application uses the sender-side statistics to determine the downlink estimation for a subscriber via:
 - The maximum bitrate that can be estimated for the connection.
 - The current bandwidth estimation for the connection.
 
 More information can be found in the [Vonage Client Observability documentation](https://developer.vonage.com/en/video/guides/client-observability/client-observability).
 
-This demo will show the sender-side statistics overlayed on the subscribers video and will update every second.
+This demo will show the sender-side statistics overlayed on the subscriber's video and will update every second.
 
 ## Demo
 
