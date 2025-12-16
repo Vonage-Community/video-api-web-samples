@@ -24,11 +24,6 @@ function startInterval(subscriber) {
         console.error('Error getting subscriber stats. ', error.message);
         return;
       }
-      console.log(`Packets received: ${stats.videoPacketsReceived}`);
-      console.log(`Packets lost: ${stats.videoPacketsLost}`);
-      console.log(`Bytes received: ${stats.videoBytesReceived}`);
-      console.log(`Timestamp: ${stats.timestamp}`);
-    
       if (stats.senderStats) {
         document.querySelector(`#subscriber-client-observability-${subscriber.streamId}`).innerHTML = `
           Timestamp: ${stats.timestamp}<br>
@@ -40,7 +35,6 @@ function startInterval(subscriber) {
       } else {
         console.log("Sender stats not available yet.");
       }
-
     });
   }, 1000);
   intervalIds[subscriber.streamId] = intervalId;
