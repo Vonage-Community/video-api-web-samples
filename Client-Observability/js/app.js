@@ -30,8 +30,6 @@ function startInterval(subscriber) {
           Connection max allocated bitrate: ${stats.senderStats.connectionMaxAllocatedBitrate} bps<br>
           Connection current estimated bandwidth: ${stats.senderStats.connectionEstimatedBandwidth} bps
         `
-        console.log(`Connection max allocated bitrate: ${stats.senderStats.connectionMaxAllocatedBitrate} bps`);
-        console.log(`Connection current estimated bandwidth: ${stats.senderStats.connectionEstimatedBandwidth} bps`);
       } else {
         console.log("Sender stats not available yet.");
       }
