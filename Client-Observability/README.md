@@ -151,7 +151,8 @@ optional parameters:
 const publisherOptions = {
   insertMode: 'append',
   width: '100%',
-  height: '100%'
+  height: '100%',
+  publishSenderStats: true // enable sender-side statistics
 };
 const publisher = OT.initPublisher('publisher', publisherOptions, handleError);
 ```
@@ -192,3 +193,26 @@ The `Session.subscribe()` method takes four parameters:
 * A set of properties (optional) that customize the appearance of the subscriber view
 * The completion handler function (optional) that is called when the method completes
   successfully or fails
+
+## Getting a Subscriber's Sender-side Statistics
+Sender-side statistics are included as an optional `senderStats` object inside the `stats` object passed to the `Subscriber.getStats()` callback. The `senderStats` object contains two properties:
+
+* `connectionMaxAllocatedBitrate` — The maximum bitrate that can be estimated for the connection (in bits per second)
+* `connectionEstimatedBandwidth` — The current estimated bandwidth for the connection (in bits per second)
+
+These two metrics are calculated per audio-video bundle, so the same values appear in both video and audio statistics. Because they reflect the transport rather than individual tracks, the metrics are shared across both audio and video.
+
+```javascript
+subscriber.getStats((error, stats) => {
+  if (error) {
+    console.error('Error getting subscriber stats. ', error.message);
+    return;
+  }
+  if (stats.senderStats) {
+    console.log(`Connection max allocated bitrate: ${stats.senderStats.connectionMaxAllocatedBitrate} bps`);
+    console.log(`Connection current estimated bandwidth: ${stats.senderStats.connectionEstimatedBandwidth} bps`);
+  } else {
+    console.log("Sender stats not available yet.");
+  }
+});
+```
